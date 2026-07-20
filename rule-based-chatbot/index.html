@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextStep — Resume & Interview Prep, Guided by RuleBot</title>
+<meta name="description" content="A resume and interview prep hub with an embedded rule-based chatbot guide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="default">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">N:S</div>
+      <div><b>NextStep</b><span>prep hub · guided by RuleBot</span></div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="resume.html" data-page="resume.html">Resume</a>
+      <a href="interview.html" data-page="interview.html">Interview</a>
+      <a href="chatbot.html" data-page="chatbot.html">Ask RuleBot</a>
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="chatbot.html" class="nav-cta">Chat now →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="shell">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Resume &amp; interview prep hub</span>
+        <h1>Land the job. <em>Skip the guesswork.</em></h1>
+        <p class="lede">Build a resume that clears ATS filters, practice real interview questions with instant feedback structure, and get guided by RuleBot — a rule-based assistant built entirely on pattern matching.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="resume.html">Build a better resume</a>
+          <a class="btn btn-secondary" href="interview.html">Practice interview questions</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="trace-line">intent: mock_question → pattern matched</div>
+        <div class="mini-bubble user">Give me a mock question</div>
+        <div class="mini-bubble">[Behavioral] Tell me about a time you faced a conflict with a teammate.<br><br>Tip: Use STAR — focus on how you resolved it, not who was right.</div>
+        <a class="btn btn-ghost" href="chatbot.html" style="width:100%;justify-content:center;margin-top:6px;">Open full chat →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">What's inside</span>
+      <h2>Three tools, one guide</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>Resume Toolkit</h3>
+        <p>An interactive checklist, a categorized action-verb bank you can copy in one click, and a rule-based bullet-point analyzer that checks your writing against real resume conventions.</p>
+        <a class="card-link" href="resume.html">Open Resume Toolkit →</a>
+      </div>
+      <div class="card">
+        <div class="icon">🎤</div>
+        <h3>Interview Practice</h3>
+        <p>Learn the STAR method, then flip through behavioral, technical, and situational questions — each with a tip on how to structure a strong answer.</p>
+        <a class="card-link" href="interview.html">Open Interview Practice →</a>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>Ask RuleBot</h3>
+        <p>A transparent rule-based chatbot — every reply shows exactly which pattern matched. Available as a floating widget on every page, or as a full chat here.</p>
+        <a class="card-link" href="chatbot.html">Open RuleBot →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps to interview-ready</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Tighten your resume</h3>
+        <p>Run each bullet through the analyzer and work through the checklist until every box is checked.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Rehearse out loud</h3>
+        <p>Flip through question cards by category and practice structuring answers with STAR.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Ask RuleBot anything</h3>
+        <p>Stuck on a specific question type or need a quick tip? RuleBot is one click away on every page.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <p>NextStep — built as a CodSoft AI Internship project. Rule-based chatbot, zero ML.</p>
+    <p><a href="about.html">About this project →</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/chatbot-engine.js"></script>
+<script src="js/widget.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

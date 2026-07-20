@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Practice — NextStep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="interview">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">N:S</div>
+      <div><b>NextStep</b><span>prep hub · guided by RuleBot</span></div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="resume.html" data-page="resume.html">Resume</a>
+      <a href="interview.html" data-page="interview.html">Interview</a>
+      <a href="chatbot.html" data-page="chatbot.html">Ask RuleBot</a>
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="chatbot.html" class="nav-cta">Chat now →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="shell">
+  <section class="section" style="padding-top:44px;">
+    <span class="eyebrow">Interview practice</span>
+    <h2 style="font-size:30px;margin-bottom:10px;">Rehearse until it's second nature</h2>
+    <p style="max-width:600px;">Learn the STAR method, then flip through real question categories. Each card reveals a tip on how to structure your answer — not a script to memorize.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="panel">
+      <h3 style="font-size:16px;margin-bottom:16px;">The STAR method</h3>
+      <div class="star-grid" id="starGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="section-head">
+      <span class="eyebrow">Practice cards</span>
+      <h2 style="font-size:22px;">Click a card to flip it</h2>
+    </div>
+    <div class="flip-tabs" id="flipTabs"></div>
+    <div class="flip-grid" id="flipGrid"></div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="panel">
+      <h3 style="font-size:16px;margin-bottom:10px;">Want a random question instead?</h3>
+      <p style="font-size:13.5px;margin-bottom:16px;">RuleBot can quiz you on demand — type "give me a mock question" any time, on any page.</p>
+      <a class="btn btn-primary" href="chatbot.html">Practice with RuleBot →</a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="cards" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3>Time your answers</h3>
+        <p>Behavioral answers should land around 60–90 seconds. Practice out loud, not just in your head — it exposes rambling fast.</p>
+      </div>
+      <div class="card">
+        <div class="icon">❓</div>
+        <h3>Prepare your questions</h3>
+        <p>Have 2-3 genuine questions ready for the interviewer. It signals real interest and gives you a feel for the team.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✉️</div>
+        <h3>Follow up fast</h3>
+        <p>Send a short, personalized thank-you within 24 hours. Reference one specific detail from the conversation.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <p>NextStep — built as a CodSoft AI Internship project.</p>
+    <p><a href="about.html">About this project →</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/chatbot-engine.js"></script>
+<script src="js/widget.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

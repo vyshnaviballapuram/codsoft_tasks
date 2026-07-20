@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — NextStep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="about">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">N:S</div>
+      <div><b>NextStep</b><span>prep hub · guided by RuleBot</span></div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="resume.html" data-page="resume.html">Resume</a>
+      <a href="interview.html" data-page="interview.html">Interview</a>
+      <a href="chatbot.html" data-page="chatbot.html">Ask RuleBot</a>
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="chatbot.html" class="nav-cta">Chat now →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="shell">
+  <section class="section" style="padding-top:44px;max-width:760px;">
+    <span class="eyebrow">About this project</span>
+    <h2 style="font-size:30px;margin-bottom:16px;">Why NextStep exists</h2>
+    <p style="font-size:15px;">This project started as a CodSoft AI Internship task: "build a chatbot that responds to user inputs based on predefined rules, using if-else statements or pattern matching." Rather than ship a bare command-line bot, the goal was to show that a rule-based engine — no machine learning, no API calls — can still power something genuinely useful when it's wrapped in a real application.</p>
+    <p style="font-size:15px;">NextStep is that application: a resume and interview prep hub where RuleBot, the chatbot, acts as a guide rather than a novelty. It answers career-prep questions, quizzes users with mock interview questions, and is available everywhere as a floating widget — while the rest of the site provides deeper, structured tools (a bullet-point analyzer, an action-verb bank, flip-card question practice) that a chatbot alone can't do well.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="section-head">
+      <span class="eyebrow">How the engine works</span>
+      <h2 style="font-size:22px;">Rule-based, not machine learning</h2>
+    </div>
+    <div class="panel">
+      <p style="font-size:14px;margin-bottom:10px;">Every message typed into RuleBot is tested, in order, against a list of intents. Each intent owns one or more regular expressions. The first pattern that matches wins, and its handler function produces a response — some handlers also extract data straight from the sentence (like pulling a name out of "my name is Alex", or parsing numbers out of a math expression).</p>
+      <p style="font-size:14px;margin:0;">There's no model, no training data, and no network request involved in generating a reply — which is why matches resolve in well under a millisecond. Toggling "show pattern trace" on the chat page reveals the exact regex and intent behind any given reply.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="section-head">
+      <span class="eyebrow">Tech stack</span>
+      <h2 style="font-size:22px;">Deliberately dependency-free</h2>
+    </div>
+    <div class="cards" style="grid-template-columns:repeat(4,1fr);">
+      <div class="card"><h3 style="font-size:14px;">HTML5</h3><p style="font-size:12.5px;">Five static, semantic pages — no server or build step required.</p></div>
+      <div class="card"><h3 style="font-size:14px;">CSS3</h3><p style="font-size:12.5px;">One shared design system: custom properties, grid, flip-card 3D transforms.</p></div>
+      <div class="card"><h3 style="font-size:14px;">Vanilla JS</h3><p style="font-size:12.5px;">Rule engine, DOM rendering, and interactivity — zero frameworks, zero build tools.</p></div>
+      <div class="card"><h3 style="font-size:14px;">Regex</h3><p style="font-size:12.5px;">The entire NLP layer: pattern matching, entity extraction, and intent routing.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="section-head">
+      <span class="eyebrow">Project structure</span>
+      <h2 style="font-size:22px;">Folder layout</h2>
+    </div>
+    <div class="panel">
+      <pre style="margin:0;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-dim);line-height:1.7;white-space:pre-wrap;">nextstep/
+├── index.html          Home
+├── resume.html         Checklist, verb bank, bullet analyzer
+├── interview.html      STAR method, flip-card question bank
+├── chatbot.html         Full RuleBot chat page
+├── about.html           This page
+├── css/styles.css       Shared design system
+├── js/data.js            Content: verbs, checklist, questions
+├── js/chatbot-engine.js  Shared rule-based matching engine
+├── js/widget.js          Floating chat widget (all pages)
+├── js/chat-page.js       Full chat page logic
+└── js/main.js            Nav, checklist, analyzer, flip cards</pre>
+    </div>
+  </section>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <p>NextStep — built as a CodSoft AI Internship project.</p>
+    <p><a href="chatbot.html">Try RuleBot →</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/chatbot-engine.js"></script>
+<script src="js/widget.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

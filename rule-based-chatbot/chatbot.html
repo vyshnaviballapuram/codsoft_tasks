@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask RuleBot — NextStep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  #widgetDisabledNote{display:none;}
+</style>
+</head>
+<body data-page="chatbot-full">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">N:S</div>
+      <div><b>NextStep</b><span>prep hub · guided by RuleBot</span></div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="resume.html" data-page="resume.html">Resume</a>
+      <a href="interview.html" data-page="interview.html">Interview</a>
+      <a href="chatbot.html" data-page="chatbot.html">Ask RuleBot</a>
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="chatbot.html" class="nav-cta">Chat now →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="shell">
+  <section class="section" style="padding-top:36px;padding-bottom:20px;">
+    <span class="eyebrow">Full chat</span>
+    <h2 style="font-size:26px;margin-bottom:6px;">Ask RuleBot</h2>
+    <p style="max-width:600px;">A transparent, rule-based assistant — every reply below can show you exactly which regex pattern and intent produced it.</p>
+  </section>
+
+  <div class="chat-page-grid" style="padding-bottom:60px;">
+    <div>
+      <div class="panel">
+        <h2 style="font-family:var(--font-display);font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-dim);margin:0 0 12px;">Recognized intents</h2>
+        <ul class="intent-list" id="intentList"></ul>
+      </div>
+      <div class="panel">
+        <h2 style="font-family:var(--font-display);font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-dim);margin:0 0 12px;">Engine stats</h2>
+        <div class="stat-row"><span>Intents</span><b id="statIntents">0</b></div>
+        <div class="stat-row"><span>Patterns</span><b id="statPatterns">0</b></div>
+        <div class="stat-row"><span>Match time</span><b id="statSpeed">&lt;1ms</b></div>
+        <div class="stat-row"><span>Exchanges</span><b id="statTurns">0</b></div>
+        <div class="toggle-row" style="margin-top:14px;">
+          <span>Show pattern trace</span>
+          <div class="switch" id="traceToggle" role="switch" aria-checked="false" tabindex="0"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-wrap" style="height:620px;">
+      <div class="chat-head">
+        <div class="avatar">🤖</div>
+        <div class="info">
+          <b>RuleBot</b>
+          <span><span class="status-dot"></span>online · pattern matching active</span>
+        </div>
+      </div>
+      <div class="messages" id="messages"></div>
+      <div class="chips" id="chips"></div>
+      <div class="input-row">
+        <input id="userInput" type="text" placeholder="Ask about resumes, interviews, or say hi…" autocomplete="off" />
+        <button class="send-btn" id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <p>NextStep — built as a CodSoft AI Internship project.</p>
+    <p><a href="about.html">About this project →</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/chatbot-engine.js"></script>
+<script src="js/chat-page.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

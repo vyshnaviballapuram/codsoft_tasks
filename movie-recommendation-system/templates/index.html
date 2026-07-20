@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Movie Match · Movie Recommender</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <div class="sprockets top"></div>
+
+  <header class="marquee">
+    <p class="eyebrow">/// content-based recommender</p>
+    <h1>MOVIE <span>MATCH</span></h1>
+    <p class="tagline">Type a film you love. Get five you probably haven't seen &mdash; matched on genre, plot, cast &amp; director.</p>
+  </header>
+
+  <main>
+    <section class="search-panel">
+      <div class="search-row">
+        <input
+          id="titleInput"
+          type="text"
+          placeholder="e.g. Inception, The Godfather, Spirited Away..."
+          list="titleList"
+          autocomplete="off"
+        />
+        <datalist id="titleList"></datalist>
+        <button id="searchBtn">Find Matches</button>
+      </div>
+      <div class="trending" id="trending"></div>
+    </section>
+
+    <section id="statusArea" class="status-area"></section>
+
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <footer>
+    <p>Built with Flask &middot; scikit-learn &middot; content-based cosine similarity &middot; demo dataset (swap in TMDB 5000 for production)</p>
+  </footer>
+
+  <div class="sprockets bottom"></div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

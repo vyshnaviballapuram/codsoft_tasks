@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Toolkit — NextStep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="resume">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">N:S</div>
+      <div><b>NextStep</b><span>prep hub · guided by RuleBot</span></div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="resume.html" data-page="resume.html">Resume</a>
+      <a href="interview.html" data-page="interview.html">Interview</a>
+      <a href="chatbot.html" data-page="chatbot.html">Ask RuleBot</a>
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="chatbot.html" class="nav-cta">Chat now →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="shell">
+  <section class="section" style="padding-top:44px;">
+    <span class="eyebrow">Resume toolkit</span>
+    <h2 style="font-size:30px;margin-bottom:10px;">Make every line earn its place</h2>
+    <p style="max-width:600px;">Work through the checklist, borrow from the action-verb bank, then paste a bullet into the analyzer to check it against real resume conventions.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="panel">
+      <h3 style="font-size:16px;margin-bottom:4px;">Resume checklist</h3>
+      <p style="font-size:13px;margin-bottom:14px;">Click an item to mark it done. Progress is tracked for this session.</p>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <span class="progress-label" id="progressLabel">0 / 0 complete</span>
+      <ul class="checklist" id="resumeChecklist"></ul>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="panel analyzer">
+      <h3 style="font-size:16px;margin-bottom:4px;">Bullet-point analyzer</h3>
+      <p style="font-size:13px;margin-bottom:14px;">Paste one resume bullet below. This runs the same kind of rule-based pattern checks RuleBot uses — no AI, just regex.</p>
+      <textarea id="bulletInput" placeholder="e.g. Led a team of 4 to redesign the onboarding flow, reducing signup drop-off by 18%"></textarea>
+      <div style="margin-top:12px;">
+        <button class="btn btn-primary" id="analyzeBtn">Analyze bullet</button>
+      </div>
+      <div class="analyzer-results" id="analyzerResults"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="panel">
+      <h3 style="font-size:16px;margin-bottom:16px;">Action verb bank</h3>
+      <div id="verbBank"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="cards" style="grid-template-columns:1fr 1fr;">
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>Beating ATS filters</h3>
+        <p>Use standard section headings (Experience, Education, Skills), avoid tables and text boxes for key info, and mirror keywords straight from the job description.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✉️</div>
+        <h3>Cover letter structure</h3>
+        <p>Three short paragraphs: a specific hook on why this role, 1–2 pieces of evidence you're a fit, and a confident close. Don't just repeat your resume.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <p>NextStep — built as a CodSoft AI Internship project.</p>
+    <p><a href="about.html">About this project →</a></p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/chatbot-engine.js"></script>
+<script src="js/widget.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
