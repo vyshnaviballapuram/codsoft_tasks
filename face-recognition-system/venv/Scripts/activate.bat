@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\91812\OneDrive\Desktop\face_recognition_app\venv
+set VIRTUAL_ENV=C:\Users\91812\OneDrive\Desktop\CODSOFT\face-recognition-system\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

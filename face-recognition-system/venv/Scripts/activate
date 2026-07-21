@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\91812\OneDrive\Desktop\face_recognition_app\venv"
+VIRTUAL_ENV="C:\Users\91812\OneDrive\Desktop\CODSOFT\face-recognition-system\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
