@@ -6,3 +6,4 @@ data/known_faces/*
 !data/known_faces/.gitkeep
 data/embeddings/*
 !data/embeddings/.gitkeep
+
